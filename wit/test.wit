@@ -1,0 +1,16 @@
+package zenmo:test;
+
+interface plugin-service {
+    hello-world: func(str: string) -> string;
+    request: func() -> string;
+}
+
+
+interface host-service {
+    hello-world: func(str: string) -> string;
+}
+
+world test {
+    import host-service;
+    export plugin-service;
+}
